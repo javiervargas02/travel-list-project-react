@@ -1,7 +1,7 @@
 export default function Stats() {
   return (
-    <div>
-      
-    </div>
-  )
+    <footer>
+      <em>🧳 You have X items on your list, and you already packed X (X%)</em>
+    </footer>
+  );
 }

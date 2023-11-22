@@ -1,7 +1,3 @@
 export default function PackingList() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div className="list">LIST</div>;
 }
