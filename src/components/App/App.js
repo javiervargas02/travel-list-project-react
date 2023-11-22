@@ -39,8 +39,7 @@ export default function App() {
         onPackItem={handlePackItem}
       />
       <Stats
-        total={items.length /* total items in the list */} 
-        packed={items.filter((item) => item.packed).length  /* filter out the elements that are unpacked and return the number of elements that are packed */}
+        items={items} 
       />
     </div>
   );
