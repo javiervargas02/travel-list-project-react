@@ -29,7 +29,6 @@ export default function App() {
     );
   }
 
-
   return (
     <div className="app">
       <Logo />
@@ -39,7 +38,10 @@ export default function App() {
         onDeleteItem={handleDeleteItem}
         onPackItem={handlePackItem}
       />
-      <Stats total={items.length} packed={items.filter(item => item.packed).length} />
+      <Stats
+        total={items.length /* total items in the list */} 
+        packed={items.filter((item) => item.packed).length  /* filter out the elements that are unpacked and return the number of elements that are packed */}
+      />
     </div>
   );
 }
