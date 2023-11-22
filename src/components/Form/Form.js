@@ -17,6 +17,7 @@ export default function Form({ onAddItem }) {
     setQuantity(1);
     setInvalidItem(false);
   }
+
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need for your trip? 🧾</h3>

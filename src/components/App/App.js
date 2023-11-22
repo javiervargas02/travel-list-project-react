@@ -12,15 +12,34 @@ const initialItems = [
 
 export default function App() {
   const [items, setItems] = useState(initialItems);
+
   function handleAddItem(newItem) {
     setItems((items) => [...items, newItem]);
   }
+
+  function handleDeleteItem(id) {
+    setItems((items) => items.filter((item) => item.id !== id));
+  }
+
+  function handlePackItem(id) {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
+  }
+
+
   return (
     <div className="app">
       <Logo />
       <Form onAddItem={handleAddItem} />
-      <PackingList items={items} />
-      <Stats />
+      <PackingList
+        items={items}
+        onDeleteItem={handleDeleteItem}
+        onPackItem={handlePackItem}
+      />
+      <Stats total={items.length} packed={items.filter(item => item.packed).length} />
     </div>
   );
 }
