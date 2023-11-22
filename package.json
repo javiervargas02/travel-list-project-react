@@ -1,7 +1,7 @@
 {
   "name": "travel-list-project-react",
   "version": "0.1.0",
-  "homepage": "https://javivargas02.github.io/travel-list-project-react",
+  "homepage": "https://javiervargas02.github.io/travel-list-project-react",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
